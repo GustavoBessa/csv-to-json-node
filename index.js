@@ -35,12 +35,9 @@ app.post('/', (req, res) => {
   delete json[json.length-1];
   var cont = 0;
   json.forEach(element => {
-    if(element.cnpj != '04.739.000/0008-35'){
-      delete json.element;
-    }
     cont++;
   });
-  console.log(cont); // Exibe a quantidade de notas
+  console.log(cont); // Exibe a quantidade de elementos
   res.send(json); // Exibe json na pagina web
 });
 
